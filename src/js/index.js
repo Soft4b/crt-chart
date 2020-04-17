@@ -12,6 +12,7 @@ $.get({
       BalanceP: el.BalanceP * 100,
     }));
     r.sort((a, b) => a.Time - b.Time);
+    console.log(r);
 
     setChartLine1($('#chart1')[0], r);
     setChartLine2($('#chart2')[0], r);
@@ -38,11 +39,6 @@ function setChartLine1(id, data) {
         color: '#FFFFFF'
       }
     ],
-    balloon: {
-      borderThickness: 1,
-      shadowAlpha: 0,
-      color: '#000000'
-    },
     graphs: [
       {
         id: 'g1',
@@ -73,7 +69,7 @@ function setChartLine1(id, data) {
       parseDates: true,
       dashLength: 1,
       maxSeries: 30,
-      // minPeriod: 'DD',
+      minPeriod: 'ss',
       minorGridEnabled: true
     },
     dataProvider: data
@@ -136,7 +132,7 @@ function setChartLine2(id, data) {
       parseDates: true,
       dashLength: 1,
       maxSeries: 30,
-      // minPeriod: 'DD',
+      minPeriod: 'ss',
       minorGridEnabled: true
     },
     dataProvider: data

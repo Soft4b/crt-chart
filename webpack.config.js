@@ -7,6 +7,7 @@ module.exports = {
     vendor: [
       'amcharts3/amcharts/amcharts',
       'amcharts3/amcharts/serial',
+      'amcharts3/amcharts/stock',
       'amcharts3/amcharts/themes/dark'
     ],
     main: './src/js/index.js'
